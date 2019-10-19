@@ -1,6 +1,6 @@
 {
   "name": "skoy",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Convert Thai to Skoy language",
   "main": "lib/skoy.js",
   "scripts": {
