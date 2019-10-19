@@ -1,4 +1,4 @@
-# Skoy.js
+# Skoy.js [![npm](https://badge.fury.io/js/skoy.svg)](https://badge.fury.io/js/skoy)
 
 As seen on http://narze.github.io/toSkoy
 
