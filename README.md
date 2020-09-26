@@ -5,7 +5,7 @@ As seen on http://narze.github.io/toSkoy
 ## Usage
 
 ```
-import { Skoy } from 'skoy'
+import Skoy from 'skoy'
 
 Skoy.convert('ฉันเป็นสก๊อยแล้วมันผิดหรือไง') 
 
