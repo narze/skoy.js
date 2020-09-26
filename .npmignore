@@ -1,3 +1,7 @@
 .github
 .history
 .vscode
+test
+lib
+tsconfig.json
+jest.config.js
