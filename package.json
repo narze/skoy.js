@@ -1,17 +1,19 @@
 {
   "name": "skoy",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Convert Thai to Skoy language",
-  "main": "lib/skoy.js",
+  "main": "dist/skoy.js",
+  "types": "dist/skoy.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/narze/skoy.js.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Manassarn Manoonchai",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/narze/skoy.js/issues"
   },
