@@ -5,3 +5,4 @@ test
 lib
 tsconfig.json
 jest.config.js
+coverage

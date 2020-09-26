@@ -26,4 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --frozen-lockfile
     - run: yarn build
-    - run: yarn test
+    - run: yarn test:ci
+
+    - uses: codecov/codecov-action@v1
+      if: ${{ matrix.node-version == "14.x" }}

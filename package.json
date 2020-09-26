@@ -6,7 +6,8 @@
   "types": "dist/skoy.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "jest --ci --coverage"
   },
   "repository": {
     "type": "git",
