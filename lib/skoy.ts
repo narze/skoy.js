@@ -35,7 +35,7 @@ function has(str: string) {
   return !!db[str];
 }
 
-let karans = "ห์,ษ์,ซ์,บ์,ป์,ฌ์".split(",");
+const karans: Array<string> = "ห์,ษ์,ซ์,บ์,ป์,ฌ์".split(",");
 function karan() {
   return karans[Math.floor(Math.random() * karans.length)];
 }
@@ -46,7 +46,7 @@ function get(str: string) {
     endingPattern = /[ก-ฮ]$/;
   if (result.length > 1) {
     if (result.match(endingPattern)) {
-      result = result.replace(endingPattern, function (a: string) {
+      result = result.replace(endingPattern, (a: string) => {
         let random = Math.random();
         if (random < 0.2) return karan() + a;
         if (random < 0.3) return a + karan();
@@ -131,25 +131,25 @@ learnPhrase(
   "มี,แฟน,หรือ,ยัง,คิด,ถึง,นะ,ขอ,เบอร์,หน่อย"
 );
 
-module.exports = {
-  convert: (input: string) => {
-    let skoy = "";
-    for (let i = 0; i < input.length; ) {
-      let success = false;
-      for (let l = maxLength; l > 0; l--) {
-        let sub = input.substr(i, l);
-        if (has(sub)) {
-          skoy += get(sub);
-          success = true;
-          i += l;
-          break;
-        }
+export function convert(input: string) {
+  let skoy = "";
+  for (let i = 0; i < input.length; ) {
+    let success = false;
+    for (let l = maxLength; l > 0; l--) {
+      let sub = input.substr(i, l);
+      if (has(sub)) {
+        skoy += get(sub);
+        success = true;
+        i += l;
+        break;
       }
-      if (success) continue;
-      skoy += input.charAt(i);
-      i += 1;
     }
+    if (success) continue;
+    skoy += input.charAt(i);
+    i += 1;
+  }
 
-    return skoy;
-  },
-};
+  return skoy;
+}
+
+export default { convert };
