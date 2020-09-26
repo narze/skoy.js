@@ -1,6 +1,6 @@
 {
   "name": "skoy",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Convert Thai to Skoy language",
   "main": "dist/skoy.js",
   "types": "dist/skoy.d.ts",
@@ -23,5 +23,9 @@
     "jest": "^26.4.2",
     "ts-jest": "^26.4.0",
     "typescript": "^4.0.3"
-  }
+  },
+  "keywords": [
+    "thai",
+    "language"
+  ]
 }
